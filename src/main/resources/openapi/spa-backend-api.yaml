@@ -1,0 +1,110 @@
+---
+openapi: 3.0.0
+info:
+  title: Single Page Application Backend API
+  description: Single Page Application Backend API
+  contact:
+    email: michael.williams@snafusoft.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.0
+servers:
+  - url: https://virtserver.swaggerhub.com/SNAFUsoft/spa-backend-api/1.0.0
+    description: SwaggerHub API Auto Mocking
+tags:
+  - name: single page application
+paths:
+  /spa/newsletter:
+    get:
+      tags:
+        - admins
+      summary: list all emails in newsletter db
+      description: List all emails in newsletter DB
+      operationId: showAll
+      responses:
+        "201":
+          description: List of newsletter emails
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/NewsletterEmailItem'
+    post:
+      tags:
+        - public
+      summary: adds email to newsletter db
+      description: Add email address to newsletter DB.
+      operationId: addEmailToNewsletter
+      requestBody:
+        description: Inventory item to add
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NewsletterSignupRequest'
+      responses:
+        "201":
+          description: Accepted
+          content:
+            'application/json':
+              schema:
+                $ref: '#/components/schemas/JsonApi'
+        "400":
+          description: bad input parameter
+  /spa/register:
+    post:
+      tags:
+        - public
+      summary: register with SPA
+      description: Register with SPA.
+      operationId: register
+      requestBody:
+        description: Inventory item to add
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RegistrationRequest'
+      responses:
+        "201":
+          description: Accepted
+          content:
+            'application/json':
+              schema:
+                $ref: '#/components/schemas/JsonApi'
+
+        "400":
+          description: bad input parameter
+components:
+  schemas:
+    NewsletterSignupRequest:
+      properties:
+        email:
+          type: string
+    RegistrationRequest:
+      properties:
+        firstName:
+          maxLength: 80
+          minLength: 2
+          type: string
+        lastName:
+          maxLength: 80
+          minLength: 2
+          type: string
+        email:
+          type: string
+        phone:
+          type: string
+    NewsletterEmailItem:
+      properties:
+        snafuId:
+          type: string
+          format: uuid
+        email:
+          type: string
+    JsonApi:
+      properties:
+        message:
+          type: string
+        error:
+          type: string
