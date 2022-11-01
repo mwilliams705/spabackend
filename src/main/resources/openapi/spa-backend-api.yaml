@@ -1,5 +1,5 @@
 ---
-openapi: 3.0.0
+openapi: 3.0.1
 info:
   title: Single Page Application Backend API
   description: Single Page Application Backend API
@@ -10,8 +10,7 @@ info:
     url: http://www.apache.org/licenses/LICENSE-2.0.html
   version: 1.0.0
 servers:
-  - url: https://virtserver.swaggerhub.com/SNAFUsoft/spa-backend-api/1.0.0
-    description: SwaggerHub API Auto Mocking
+  - url: http://localhost:8080/v1
 tags:
   - name: single page application
 paths:

@@ -1,0 +1,32 @@
+version: '3.3'
+
+services:
+  #service 1: definition of mysql database
+  db:
+    image: mysql:latest
+    container_name: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=spabackend
+    ports:
+      - "3306:3306"
+    restart: always
+
+
+  #service 3: definition of your spring-boot app
+  spa:                        #it is just a name, which will be used only in this file.
+    image: mwilliams705/spa-backend               #name of the image after dockerfile executes
+    container_name: spabackend-springboot-app  #name of the container created from docker image
+    build:
+      context: .                          #docker file path (. means root directory)
+      dockerfile: Dockerfile              #docker file name
+    ports:
+      - "8085:8085"                       #docker containter port with your os port
+    restart: always
+
+    depends_on:                           #define dependencies of this app
+      - db                                #dependency name (which is defined with this name 'db' in this file earlier)
+
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/spa_backend?createDatabaseIfNotExist=true
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: spabackend

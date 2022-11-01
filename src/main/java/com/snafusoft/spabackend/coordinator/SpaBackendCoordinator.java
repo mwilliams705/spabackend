@@ -1,5 +1,7 @@
 package com.snafusoft.spabackend.coordinator;
 
+
+
 import com.snafusoft.spabackend.model.NewsletterEmailItem;
 import com.snafusoft.spabackend.model.NewsletterSignupRequest;
 import com.snafusoft.spabackend.model.RegistrationRequest;

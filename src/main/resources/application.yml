@@ -1,7 +1,9 @@
 spring:
   datasource:
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/spa_backend
+    url: ${SPRING_DATASOURCE_URL}
   jpa:
     hibernate.ddl-auto: update
     generate-ddl: true
