@@ -1,5 +1,7 @@
 name: derp
-on: [push]
+on: 
+  schedule:
+    - cron: "39 1 * * *"
 
 jobs:
   list-files:
