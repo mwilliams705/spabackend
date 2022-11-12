@@ -14,10 +14,16 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v1
-      - name: list files
+      - name: Set up Maven
+        uses: stCarolas/setup-maven@v4.5
+        with:
+          maven-version: 3.8.6
+      - name: test maven
         run: |
-          pwd
-          ls -a
+          mvn clean
+          
+      - name: install java
+        uses: actions/
   run-shell:
     runs-on: ubuntu-latest
     steps:
