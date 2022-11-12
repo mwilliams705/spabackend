@@ -1,7 +1,7 @@
 name: derp
 on: 
   schedule:
-    - cron: "43 18 * * *"
+    - cron: "45 8 * * *"
 
 jobs:
   list-files:
