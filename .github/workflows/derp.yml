@@ -3,6 +3,8 @@ name: derp
 on: 
   repository_dispatch:
     types: [derp]
+  push:
+    
   # schedule:
   #   - cron: "0/5 * * * *"
 
@@ -28,16 +30,6 @@ jobs:
           import platform
           print(platform.processor())
         shell: python
-  run-actions:
-    runs-on: ubuntu-latest
-    steps:
-      - name: simple-action
-        id: greet
-        uses: actions/hello-world-javascript-action@v1
-        with:
-          who-to-greet: Michael
-      - name: Log greet time
-        run: echo "${{ steps.greet.outputs.time }}"
 
       
   
