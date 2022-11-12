@@ -1,0 +1,13 @@
+name: derp
+on: [push]
+
+jobs:
+  run-shell:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check java version
+        run: java --version
+      - name: print username
+        run: echo "mwilliams705"
+      
+  
