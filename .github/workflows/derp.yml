@@ -5,6 +5,8 @@ jobs:
   list-files:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout
+        uses: actions/checkout
       - name: list files
         run: pwd
   run-shell:
