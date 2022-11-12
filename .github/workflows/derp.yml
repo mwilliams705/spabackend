@@ -21,9 +21,6 @@ jobs:
       - name: test maven
         run: |
           mvn clean
-          
-      - name: install java
-        uses: actions/
   run-shell:
     runs-on: ubuntu-latest
     steps:
