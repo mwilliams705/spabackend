@@ -26,7 +26,7 @@ jobs:
         run: |
           mvn clean install
       - name: list 
-        run: pwd
+        run: ls -a
   run-shell:
     runs-on: ubuntu-latest
     steps:
