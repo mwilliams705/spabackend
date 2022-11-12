@@ -20,7 +20,9 @@ jobs:
           maven-version: 3.8.2
       - name: test maven
         run: |
-          mvn clean
+          mvn clean install
+      - name: list 
+        run: pwd
   run-shell:
     runs-on: ubuntu-latest
     steps:
