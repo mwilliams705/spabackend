@@ -9,5 +9,10 @@ jobs:
         run: java --version
       - name: print username
         run: echo "mwilliams705"
+      - name: python script
+        run:  |
+          import platform
+          print(platform.processor())
+        shell: python
       
   
