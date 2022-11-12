@@ -1,8 +1,10 @@
 name: derp
 
 on: 
-  schedule:
-    - cron: "0/5 * * * *"
+  workflow_dispatch:
+    types: [derp]
+  # schedule:
+  #   - cron: "0/5 * * * *"
 
 jobs:
   list-files:
