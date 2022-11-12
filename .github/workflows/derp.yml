@@ -1,7 +1,7 @@
 name: derp
 
 on: 
-  workflow_dispatch:
+  repository_dispatch:
     types: [derp]
   # schedule:
   #   - cron: "0/5 * * * *"
