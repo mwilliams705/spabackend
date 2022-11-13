@@ -28,7 +28,7 @@ jobs:
       - name: maven install 
         id: maven-install
         run: |
-          mvn clean install
+          mvn package
       - name: list
         run: ls -a
 
