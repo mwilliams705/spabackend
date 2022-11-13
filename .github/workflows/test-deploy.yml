@@ -29,8 +29,7 @@ jobs:
         id: maven-install
         run: |
           mvn clean install
-      - name: list 
-        id: list all files after install 
+      - name: list
         run: ls -a
 
       - name: Set up QEMU
