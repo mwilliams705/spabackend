@@ -34,10 +34,6 @@ jobs:
       - name: list 
         id: list all files after install 
         run: ls -a
-      - name: docker-build
-        uses: 'docker'
-        image: 'Dockerfile'
-        args: 
 
       
   
