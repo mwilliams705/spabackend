@@ -4,8 +4,6 @@ on:
   repository_dispatch:
     types: [test]
   push:
-    branches:
-      - 'test'
     
   # schedule:
   #   - cron: "0/5 * * * *"
