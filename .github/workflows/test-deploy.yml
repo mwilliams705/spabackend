@@ -30,7 +30,9 @@ jobs:
         run: |
           mvn clean package
       - name: list
-        run: ls -a
+        run: |
+          ls -a
+          cd ./target ** ls -a
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
