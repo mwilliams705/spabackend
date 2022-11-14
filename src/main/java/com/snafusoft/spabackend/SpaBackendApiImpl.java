@@ -36,4 +36,9 @@ public class SpaBackendApiImpl implements SpaApiDelegate {
     public ResponseEntity<List<NewsletterEmailItem>> showAll() {
         return ResponseEntity.ok(coordinator.getListOfNewsletterEmails());
     }
+
+    @Override
+    public ResponseEntity<String> greet(String name) {
+        return ResponseEntity.ok("Hello, "+ name);
+    }
 }
