@@ -29,10 +29,10 @@ jobs:
         id: maven-install
         run: |
           mvn clean package
-      - name: list
+      - name: list jar name
         run: |
-          ls -a
-          cd ./target && ls -a
+          cd ./target
+          ls -a | grep jar
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
