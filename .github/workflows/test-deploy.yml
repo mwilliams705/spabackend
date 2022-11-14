@@ -32,7 +32,7 @@ jobs:
       - name: list
         run: |
           ls -a
-          cd ./target ** ls -a
+          cd ./target && ls -a
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
