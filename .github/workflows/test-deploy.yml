@@ -27,8 +27,8 @@ jobs:
         uses: stCarolas/setup-maven@v4.5
         with:
           maven-version: 3.8.2
-      - name: maven install 
-        id: maven-install
+      - name: Package Jar
+        id: package-jar
         run: |
           mvn clean package
       - name: list jar name
