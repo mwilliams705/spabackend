@@ -19,7 +19,7 @@
 		<contextVersion>/v1</contextVersion>
 		<contextPath>${contextVersion}/${project.name}</contextPath>
 		<serviceName>${project.name}</serviceName>
-		<projectVersion>${project.version}</projectVersion>
+		<projectVersion>v1</projectVersion>
 		<projectTag>${project.version}.${git.commit.id}</projectTag>
 	</properties>
 
