@@ -14,7 +14,7 @@ services:
 
   #service 3: definition of your spring-boot app
   spa:                        #it is just a name, which will be used only in this file.
-    image: mwilliams705/spa-backend               #name of the image after dockerfile executes
+    image: mwilliams705/spabackend               #name of the image after dockerfile executes
     container_name: spabackend-springboot-app  #name of the container created from docker image
     build:
       context: .                          #docker file path (. means root directory)
