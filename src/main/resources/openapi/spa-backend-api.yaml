@@ -76,26 +76,26 @@ paths:
 
 #Uncomment to add this endpoint
 
-  /spa/greeting/{name}:
-    post:
-      parameters:
-        - in: path
-          name: name
-          schema:
-            type: string
-          required: true
-          description: Name of person to greet
-      tags:
-        - public
-      summary: Simple greeting endpoint
-      operationId: greet
-      responses:
-        "201":
-          description: Accepted
-          content:
-            'application/json':
-              schema:
-                type: string
+#  /spa/greeting/{name}:
+#    post:
+#      parameters:
+#        - in: path
+#          name: name
+#          schema:
+#            type: string
+#          required: true
+#          description: Name of person to greet
+#      tags:
+#        - public
+#      summary: Simple greeting endpoint
+#      operationId: greet
+#      responses:
+#        "201":
+#          description: Accepted
+#          content:
+#            'application/json':
+#              schema:
+#                type: string
 
 
 
